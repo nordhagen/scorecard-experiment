@@ -1,0 +1,44 @@
+@import '../global.scss';
+
+.App {
+  max-height: 100vh;
+  background: black;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.Header,
+.TabBar {
+  line-height: 0;
+  img {
+    width: 100%;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+}
+
+:global {
+  .modal-enter {
+    opacity: 0;
+    transform: translate3d(10%, 0, 0);
+  }
+  .modal-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 300ms, transform 300ms;
+  }
+  .modal-exit {
+    opacity: 1;
+  }
+  .modal-exit-active {
+    opacity: 0;
+    transform: translate3d(10%, 0, 0);
+    transition: opacity 300ms, transform 300ms;
+  }
+  .modal-enter-done {
+    width: 100%;
+  }
+}

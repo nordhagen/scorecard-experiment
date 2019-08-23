@@ -1,0 +1,15 @@
+@import '../global.scss';
+
+.ResultsView {
+  display: inline-flex;
+  width: 30vw;
+  height: 100vh;
+  background: #ccc;
+
+  ul,
+  li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+}

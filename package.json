@@ -1,0 +1,55 @@
+{
+  "name": "scoreboard",
+  "version": "1.0.0",
+  "description": "This Repo is intended to instruct new Native developer candidates on the steps to follow for completing the Norigin Media testing task.",
+  "keywords": [],
+  "homepage": "https://github.com/nordhagen/scoreboard#readme",
+  "author": "",
+  "license": "ISC",
+  "assetsPath": "mock-data",
+  "main": "index.js",
+  "bugs": {
+    "url": "https://github.com/nordhagen/scoreboard/issues"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|less|sass|scss)$": "<rootDir>/__mocks__/styleMock.js",
+      "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js"
+    }
+  },
+  "scripts": {
+    "test": "jest",
+    "test-update-snapshots": "jest -u",
+    "start": "parcel -d dev src/index.html",
+    "build": "parcel build -d dist src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://nordhagen@github.com/nordhagen/scoreboard.git"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-jest": "^24.8.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "jest": "^24.8.0",
+    "parcel": "^1.12.3",
+    "parcel-plugin-asset-copier": "^1.0.0",
+    "postcss-modules": "^1.4.1",
+    "react-test-renderer": "^16.8.6",
+    "sass": "^1.21.0",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "moment": "^2.24.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.1.0",
+    "react-transition-group": "^4.1.1",
+    "redux": "^4.0.1",
+    "redux-saga": "^1.0.3"
+  }
+}

@@ -1,0 +1,51 @@
+@import '../../global.scss';
+
+.EPGChannelItem {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+
+  @include media(phablet) {
+    border-top: 1px solid #333;
+  }
+
+  h2 {
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    text-indent: -1000px;
+    margin: 0;
+  }
+
+  .scheduleList {
+    display: block;
+    width: 100%;
+    margin: 0 20px 0 100px;
+    position: relative;
+
+    @include media(phablet) {
+      width: 100%;
+      white-space: nowrap;
+      overflow: auto;
+      margin-right: 0;
+      max-width: 100000px;
+    }
+
+    &:before {
+      content: 'Nothing on right now';
+      position: absolute;
+      display: flex;
+      height: 100%;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      z-index: 1;
+      color: #333;
+    }
+  }
+}

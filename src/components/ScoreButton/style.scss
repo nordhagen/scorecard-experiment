@@ -1,0 +1,15 @@
+@import '../../global.scss';
+
+.ScoreButton {
+  width: 100px;
+  height: 100px;
+  display: inline-flex;
+  margin: 10px;
+  flex-direction: column;
+  border: 0;
+  background: #ccc;
+  justify-content: center;
+  font-family: 'Courier New', Courier, monospace;
+  align-items: center;
+  font-size: 2rem;
+}
