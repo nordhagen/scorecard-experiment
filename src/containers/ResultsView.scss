@@ -2,6 +2,7 @@
 
 .ResultsView {
   display: inline-flex;
+  flex-direction: column;
   width: 30vw;
   height: 100vh;
   background: #ccc;
@@ -11,5 +12,28 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+  }
+
+  table,
+  tbody,
+  thead,
+  tr {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  table,
+  td,
+  th {
+    border: 1px solid red;
+  }
+
+  .itemCell {
+    width: 60%;
+  }
+
+  .qtyCell,
+  .scoreCell {
+    width: 20%;
   }
 }

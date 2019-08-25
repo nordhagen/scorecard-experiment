@@ -1,26 +1,55 @@
 import * as React from 'react'
 import styles from './ButtonsView.scss'
 import ScoreButton from '../components/ScoreButton'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import { AppState } from '../store'
+import { addScoreItem } from '../store/score/actions'
+import { ScoreConfig } from '../store/config/types'
 
-interface Props {}
-
-interface State {
-  count: number
+interface ButtonsViewProps {
+  config: ScoreConfig
+  addScoreItem: typeof addScoreItem
 }
 
-export default class ButtonsView extends React.Component<Props, State> {
+class ButtonsView extends React.Component<ButtonsViewProps> {
+  colorMap = {
+    a: '#ff0000',
+    b: '#00ff00',
+    c: '#0000ff',
+    d: '#ffff00'
+  }
+
   handleClick(buttonId) {
-    console.log('noop')
+    addScoreItem({ type: buttonId, value: 1 })
   }
 
   render() {
+    const buttons = this.props.config.items.map(item => (
+      <ScoreButton
+        id={item.type}
+        key={item.type}
+        clickDelegate={this.handleClick}
+        color={this.colorMap[item.type]}
+      />
+    ))
+
     return (
       <section className={styles.ButtonsView}>
-        <ScoreButton id="A" clickDelegate={this.handleClick} color="#ff0000" />
-        <ScoreButton id="B" clickDelegate={this.handleClick} color="#00ff00" />
-        <ScoreButton id="C" clickDelegate={this.handleClick} color="#6666ff" />
-        <ScoreButton id="D" clickDelegate={this.handleClick} color="#ffff00" />
+        <header>
+          <h1>Kahoot! Points</h1>
+        </header>
+        <div className={styles.buttons}>{buttons}</div>
       </section>
     )
   }
 }
+
+const mapStateToProps = (state: AppState) => ({
+  config: state.config
+})
+
+const mapDispatchToProps = dispatch =>
+  bindActionCreators({ addScoreItem }, dispatch)
+
+export default connect(mapStateToProps)(ButtonsView)
