@@ -14,7 +14,7 @@ const ScoreButton: React.FunctionComponent<Props> = props => {
   return (
     <button
       className={styles.ScoreButton}
-      onClick={e => props.clickDelegate(props.id)}
+      onClick={e => props.clickDelegate(props.id, 1)}
       style={inlineStyle}
     >
       {props.id}

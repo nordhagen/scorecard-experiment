@@ -25,6 +25,8 @@ function adjustScoreForBonus(
   bonusCount: number,
   config: ScoreConfigItem
 ): number {
+  console.warn('calculation is off')
+  console.log(score, config.unitPoints, config.bonusValue, bonusCount)
   return score - config.unitPoints * bonusCount + config.bonusValue * bonusCount
 }
 

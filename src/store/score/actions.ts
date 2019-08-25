@@ -1,9 +1,17 @@
-import { ADD_SCORE_ITEM, RESET_SCORE_ITEMS, ScoreItem } from './types'
+import {
+  ADD_SCORE_ITEM,
+  RESET_SCORE_ITEMS,
+  ScoreItem,
+  AddScoreItemAction
+} from './types'
 
-export const addScoreItem = (content: ScoreItem) => {
+export const addScoreItem = (
+  type: string,
+  count: number
+): AddScoreItemAction => {
   return {
     type: ADD_SCORE_ITEM,
-    item: content
+    item: { type, count }
   }
 }
 

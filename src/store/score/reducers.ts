@@ -6,12 +6,21 @@ import {
   ScoreActionTypes
 } from './types'
 
+// const initialState: ScoreState = {
+//   items: [
+//     { type: 'a', count: 4 },
+//     { type: 'b', count: 2 },
+//     { type: 'c', count: 1 },
+//     { type: 'd', count: 3 }
+//   ]
+// }
+
 const initialState: ScoreState = {
   items: [
-    { type: 'a', count: 4 },
-    { type: 'b', count: 2 },
-    { type: 'c', count: 1 },
-    { type: 'd', count: 3 }
+    { type: 'a', count: 0 },
+    { type: 'b', count: 0 },
+    { type: 'c', count: 0 },
+    { type: 'd', count: 0 }
   ]
 }
 
@@ -19,23 +28,23 @@ function updateScoreState(
   state: ScoreState,
   action: AddScoreItemAction
 ): ScoreState {
-  return <ScoreState>{
-    items: state.items.map(item => {
-      if (item.type === action.item.type) {
-        return { ...item, count: item.count += action.item.count }
-      }
-    })
+  let newState = <ScoreState>{
+    items: state.items.map(item =>
+      item.type === action.item.type
+        ? { ...item, count: item.count += action.item.count }
+        : item
+    )
   }
+  return newState
 }
 
 export function scoreStateReducer(
   state: ScoreState = initialState,
   action: ScoreActionTypes
 ): ScoreState {
-  console.log('yep', action.type)
   switch (action.type) {
     case ADD_SCORE_ITEM:
-      updateScoreState(state, action)
+      return updateScoreState(state, action)
 
     case RESET_SCORE_ITEMS:
       return initialState

@@ -20,16 +20,12 @@ class ButtonsView extends React.Component<ButtonsViewProps> {
     d: '#ffff00'
   }
 
-  handleClick(buttonId) {
-    addScoreItem({ type: buttonId, value: 1 })
-  }
-
   render() {
     const buttons = this.props.config.items.map(item => (
       <ScoreButton
         id={item.type}
         key={item.type}
-        clickDelegate={this.handleClick}
+        clickDelegate={this.props.addScoreItem}
         color={this.colorMap[item.type]}
       />
     ))
@@ -52,4 +48,7 @@ const mapStateToProps = (state: AppState) => ({
 const mapDispatchToProps = dispatch =>
   bindActionCreators({ addScoreItem }, dispatch)
 
-export default connect(mapStateToProps)(ButtonsView)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ButtonsView)
