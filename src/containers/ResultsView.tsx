@@ -6,7 +6,6 @@ import { connect } from 'react-redux'
 import { computeScoreTotals, ScoreTotals } from '../selectors'
 import { ScoreState } from '../store/score/types'
 import { resetScoreItems } from '../store/score/actions'
-import { clearLine } from 'readline'
 
 interface ResultsViewProps {
   scoreState: ScoreState
@@ -15,9 +14,10 @@ interface ResultsViewProps {
 }
 
 class ResultsView extends React.Component<ResultsViewProps> {
+  handleNewGame() {}
+
   render() {
     const scoreItems = this.props.scoreState.items.map(d => (
-      // <ScoreItem key={d.type} {...d} />
       <ScoreItem
         key={d.type}
         id={d.type}
@@ -31,23 +31,35 @@ class ResultsView extends React.Component<ResultsViewProps> {
         <header>
           <h2>Player items</h2>
         </header>
-
-        <table>
-          <thead>
-            <tr>
-              <th className={styles.itemCell}>Item</th>
-              <th className={styles.qtyCell}>Qty</th>
-              <th className={styles.scoreCell}>Score</th>
-            </tr>
-          </thead>
-          <tbody>{scoreItems}</tbody>
-        </table>
-
-        <div className={styles.bonuses}>
-          <h3>Bonuses: {this.props.totals.bonus}</h3>
-        </div>
-        <div className={styles.totals}>
-          <h3>Total score: {this.props.totals.score}</h3>
+        <div className={styles.resultsColumn}>
+          <div className={styles.resultsTable}>
+            <table>
+              <thead>
+                <tr>
+                  <th className={styles.itemCell}>Item</th>
+                  <th className={styles.qtyCell}>Qty</th>
+                  <th className={styles.scoreCell}>Score</th>
+                </tr>
+              </thead>
+              <tbody>{scoreItems}</tbody>
+            </table>
+          </div>
+          <div className={styles.summary}>
+            <div className={styles.bonuses}>
+              <p>Bonuses: {this.props.totals.bonus}</p>
+            </div>
+            <div className={styles.totals}>
+              <h3>Total score:</h3>
+              <p className={styles.totalScore}>{this.props.totals.score}</p>
+              <button
+                type="button"
+                className={styles.resetButton}
+                onClick={this.props.resetScoreItems}
+              >
+                New game
+              </button>
+            </div>
+          </div>
         </div>
       </section>
     )
@@ -60,4 +72,10 @@ const mapStateToProps = state => ({
   totals: computeScoreTotals(state)
 })
 
-export default connect(mapStateToProps)(ResultsView)
+const mapDispatchToProps = dispatch =>
+  bindActionCreators({ resetScoreItems }, dispatch)
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ResultsView)
