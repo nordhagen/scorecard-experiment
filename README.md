@@ -4,6 +4,8 @@
 
 ## How to run the project
 
+For your convenience I have deployed the app to a free dyno on Heroku (might need to give it a couple of seconds to spin up): https://scorecard-experiment.herokuapp.com/
+
 If you have Node installed, run `npm start` from the repository root and open your web browser at the address provided in the command line readout.
 
 If you don't care to install Node, just cd to the dist directory, run a simple HTTP server and visit the address/port combo in the readout.
