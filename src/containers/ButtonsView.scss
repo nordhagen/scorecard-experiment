@@ -3,8 +3,18 @@
 .ButtonsView {
   width: 70vw;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.kahoot {
+  font-weight: 600;
 }
 
 .buttons {
   padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
 }
