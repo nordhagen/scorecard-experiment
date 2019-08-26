@@ -16,7 +16,7 @@ const initialState: ScoreConfig = {
     },
     {
       type: 'c',
-      unitPoints: 10,
+      unitPoints: 20,
       bonusTrigger: null,
       bonusValue: null
     },
