@@ -1,8 +1,8 @@
 import * as React from 'react'
-import styles from './App.scss'
+import styles from './style.scss'
 
-import ButtonsView from './ButtonsView'
-import ResultsView from './ResultsView'
+import ButtonsView from '../ButtonsView'
+import ResultsView from '../ResultsView'
 
 export default class App extends React.Component {
   render() {

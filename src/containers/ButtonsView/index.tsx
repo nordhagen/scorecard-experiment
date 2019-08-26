@@ -1,11 +1,11 @@
 import * as React from 'react'
-import styles from './ButtonsView.scss'
-import ScoreButton from '../components/ScoreButton'
+import styles from './style.scss'
+import ScoreButton from '../../components/ScoreButton'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { AppState } from '../store'
-import { addScoreItem } from '../store/score/actions'
-import { ScoreConfig } from '../store/config/types'
+import { AppState } from '../../store'
+import { addScoreItem } from '../../store/score/actions'
+import { ScoreConfig } from '../../store/config/types'
 
 interface ButtonsViewProps {
   config: ScoreConfig

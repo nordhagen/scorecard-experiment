@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`It renders correctly 1`] = `
+Array [
+  <main>
+    <section>
+      <header>
+        <h1>
+          <span>
+            Kahoot!
+          </span>
+           Points
+        </h1>
+      </header>
+      <div>
+        <button
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#F27781",
+            }
+          }
+        >
+          a
+        </button>
+        <button
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#04BF8A",
+            }
+          }
+        >
+          b
+        </button>
+        <button
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#F2CF1D",
+            }
+          }
+        >
+          c
+        </button>
+        <button
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#F29F05",
+            }
+          }
+        >
+          d
+        </button>
+      </div>
+    </section>
+    <section>
+      <header>
+        <h2>
+          Player items
+        </h2>
+      </header>
+      <div>
+        <div>
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  Item
+                </th>
+                <th>
+                  Qty
+                </th>
+                <th>
+                  Score
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  a
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  b
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  c
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  d
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <div>
+            <p>
+              Bonuses: 
+              0
+            </p>
+          </div>
+          <div>
+            <h3>
+              Total score:
+            </h3>
+            <p>
+              0
+            </p>
+            <button
+              onClick={[Function]}
+              type="button"
+            >
+              New game
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>,
+  ")",
+]
+`;

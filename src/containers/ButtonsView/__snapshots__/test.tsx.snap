@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`It renders correctly 1`] = `
+Array [
+  <section>
+    <header>
+      <h1>
+        <span>
+          Kahoot!
+        </span>
+         Points
+      </h1>
+    </header>
+    <div>
+      <button
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#F27781",
+          }
+        }
+      >
+        a
+      </button>
+      <button
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#04BF8A",
+          }
+        }
+      >
+        b
+      </button>
+      <button
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#F2CF1D",
+          }
+        }
+      >
+        c
+      </button>
+      <button
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#F29F05",
+          }
+        }
+      >
+        d
+      </button>
+    </div>
+  </section>,
+  ")",
+]
+`;

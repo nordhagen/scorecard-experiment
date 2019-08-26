@@ -1,11 +1,11 @@
 import * as React from 'react'
-import styles from './ResultsView.scss'
-import ScoreItem from '../components/ScoreItem'
+import styles from './style.scss'
+import ScoreItem from '../../components/ScoreItem'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { computeScoreTotals, ScoreTotals } from '../selectors'
-import { ScoreState } from '../store/score/types'
-import { resetScoreItems } from '../store/score/actions'
+import { computeScoreTotals, ScoreTotals } from '../../selectors'
+import { ScoreState } from '../../store/score/types'
+import { resetScoreItems } from '../../store/score/actions'
 
 interface ResultsViewProps {
   scoreState: ScoreState
