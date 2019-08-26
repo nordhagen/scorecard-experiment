@@ -31,7 +31,7 @@ function updateScoreState(
   let newState = <ScoreState>{
     items: state.items.map(item =>
       item.type === action.item.type
-        ? { ...item, count: item.count += action.item.count }
+        ? { ...item, count: item.count + action.item.count }
         : item
     )
   }
