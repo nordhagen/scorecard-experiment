@@ -14,8 +14,6 @@ interface ResultsViewProps {
 }
 
 class ResultsView extends React.Component<ResultsViewProps> {
-  handleNewGame() {}
-
   render() {
     const scoreItems = this.props.scoreState.items.map(d => (
       <ScoreItem
