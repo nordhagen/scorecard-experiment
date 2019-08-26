@@ -14,10 +14,10 @@ interface ButtonsViewProps {
 
 class ButtonsView extends React.Component<ButtonsViewProps> {
   colorMap = {
-    a: '#ff0000',
-    b: '#00ff00',
-    c: '#0000ff',
-    d: '#ffff00'
+    a: '#F27781',
+    b: '#04BF8A',
+    c: '#F2CF1D',
+    d: '#F29F05'
   }
 
   render() {
@@ -33,7 +33,9 @@ class ButtonsView extends React.Component<ButtonsViewProps> {
     return (
       <section className={styles.ButtonsView}>
         <header>
-          <h1>Kahoot! Points</h1>
+          <h1>
+            <span className={styles.kahoot}>Kahoot!</span> Points
+          </h1>
         </header>
         <div className={styles.buttons}>{buttons}</div>
       </section>
