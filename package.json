@@ -6,7 +6,6 @@
   "homepage": "https://github.com/nordhagen/scoreboard#readme",
   "author": "",
   "license": "ISC",
-  "assetsPath": "mock-data",
   "main": "index.js",
   "bugs": {
     "url": "https://github.com/nordhagen/scoreboard/issues"
@@ -40,13 +39,13 @@
     "babel-preset-stage-0": "^6.24.1",
     "jest": "^24.8.0",
     "parcel": "^1.12.3",
-    "parcel-plugin-asset-copier": "^1.0.0",
     "postcss-modules": "^1.4.1",
     "react-test-renderer": "^16.8.6",
     "sass": "^1.21.0",
     "typescript": "^3.5.3"
   },
   "dependencies": {
+    "@types/jest": "^24.0.18",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.1.0",
