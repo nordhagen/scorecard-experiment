@@ -1,6 +1,6 @@
 # Notes on decisions and progress
 
-![Screenshot](https://raw.githubusercontent.com/nordhagen/scorecard-experiment/nordhagen/assets/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/nordhagen/scorecard-experiment/master/assets/screenshot.png)
 
 ## How to run the project
 
